@@ -6,7 +6,7 @@ public class Cuenta {
 
 	// private String dniTitular;
 	private Persona titular;
-	private double saldo;
+	protected double saldo;
 	//private double importe;
 
 	public Cuenta(String dniTitular) {
@@ -19,8 +19,8 @@ public class Cuenta {
 		this.saldo = saldo;
 	}
 
-	public Cuenta(String dniTitular, String nombre, int edad, String genero, double saldo) {
-		Persona aux = new Persona(dniTitular, nombre, edad, genero);
+	public Cuenta(String dni, String nombre, int edad, String genero,double saldo) {
+		Persona aux = new Persona(dni,nombre,edad,genero);
 		if (aux.esMayorDeEdad())
 			titular = aux;
 		if (saldo >= 0)
@@ -34,8 +34,8 @@ public class Cuenta {
 
 	/*
 	 * depositar(double importe): se ingresa un importe a la cuenta, si el importe
-	 * es negativo o cero, no se hará nada y el método devolverá false (error), caso
-	 * contrario deberá retornar true (ok) y actualizar el saldo de la cuenta.
+	 * es negativo o cero, no se harï¿½ nada y el mï¿½todo devolverï¿½ false (error), caso
+	 * contrario deberï¿½ retornar true (ok) y actualizar el saldo de la cuenta.
 	 */
 
 	public boolean depositar(double importe) {
@@ -73,5 +73,8 @@ public class Cuenta {
 	public double getSaldo() {
 		return saldo;
 	}
-
+	public boolean esMayor() {
+		return titular.esMayorDeEdad();
+	}
+	
 }
