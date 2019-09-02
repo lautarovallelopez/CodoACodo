@@ -3,12 +3,13 @@ package tecnicas.u06;
 import java.util.Scanner;
 
 public class Ej05 {
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// 5) Crear un arreglo de n posiciones y llenarlo con nombres de personas.
 
-		int n = asignartamaño("ingrese el tamaño de posiciones");
+		int n = asignartamano("ingrese el tamaÃ±o de posiciones");
 		String[] nombres = new String[n];
 
 		leernombres("ingrese nombres", nombres);
@@ -16,7 +17,7 @@ public class Ej05 {
 
 	}
 
-	static int asignartamaño(String mensaje) {
+	static int asignartamano(String mensaje) {
 		Scanner te = new Scanner(System.in);
 		System.out.println(mensaje);
 		int tam = te.nextInt();
