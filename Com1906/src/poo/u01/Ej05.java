@@ -8,6 +8,7 @@ public class Ej05 {
 		System.out.println(p2.getEdad());
 		System.out.println(p1);
                 //esto es un comentario del primer commit
+		//otrp
 	}
 
 }
